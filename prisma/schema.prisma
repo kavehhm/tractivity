@@ -1,0 +1,66 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model ActivitySet {
+  id           String     @id @default(uuid())
+  name         String
+  creatorId String
+  activityList ActivityLinkSet[]
+  description String
+}
+
+model Activity {
+  id            String       @id @default(uuid())
+  creatorId     String
+  name          String
+  stillActive   Boolean  @default(false)
+  startDate     DateTime?
+  endDate       DateTime?
+  imageUrl      String?
+  description   String?
+  awardImageURL Awards[]
+  Reflection    String?
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+  hoursPerWeek  Int?         @default(0)
+  ActivitySet   ActivityLinkSet[] 
+
+}
+
+model ActivityLinkSet {
+  activityId              String        @default(uuid())
+  activity Activity @relation(fields: [activityId], references: [id])
+
+  activitySetId String       @default(uuid())
+  activitySet ActivitySet @relation(fields: [activitySetId], references: [id])
+
+  @@id([activitySetId,activityId])
+
+
+  @@index([activityId])
+  @@index([activitySetId])
+}
+
+model Awards {
+  id       String @id @default(uuid())
+  imageUrl String
+
+  Activity   Activity? @relation(fields: [activityId], references: [id])
+  activityId String?
+
+  @@index([activityId])
+}
+
+model UserData {
+    id       String @id @default(uuid())
+    userId   String @unique
+    uploads  Int @default(0)
+
+}
