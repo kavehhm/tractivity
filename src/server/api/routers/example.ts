@@ -428,7 +428,7 @@ export const exampleRouter = createTRPCRouter({
       z.object({
         name: z.string(),
         creatorId: z.string(),
-        description: z.string().max(50),
+        description: z.string().max(100),
       }),
     )
     .mutation(async ({ input: { name, creatorId, description }, ctx }) => {

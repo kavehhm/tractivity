@@ -175,12 +175,13 @@ const UpdateActivity = ({
           />{" "}
           <label>Still active?</label>
         </div>
-        <div className="w-64 rounded-md border-2">
+        <div className="w-64 z-50 rounded-md border-2">
           <Datepicker
             primaryColor={"purple"}
             maxDate={new Date()}
             value={dates}
-            popoverDirection='up'
+            popoverDirection="down"
+            
             classNames={'z-50'}
             startFrom={
               new Date(
@@ -191,7 +192,7 @@ const UpdateActivity = ({
             }
             asSingle={stillActive}
             onChange={handleValueChange}
-            showShortcuts={true}
+            showShortcuts={false}
             placeholder="Select date range"
           />
         </div>

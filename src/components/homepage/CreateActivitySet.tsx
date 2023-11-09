@@ -49,10 +49,10 @@ const CreateActivitySet = ({
       <div className="flex flex-col gap-3">
         <label className="text-lg font-bold text-gray-900">Description</label>
         <p className="text-xs text-gray-600">
-          {description.length} / 50
+          {description.length} / 100
         </p>
         <textarea
-        maxLength={50}
+        maxLength={100}
           onChange={(e) => setDescription(e.target.value)}
           className="rounded-md  border-2 bg-white px-4 py-2 placeholder:text-sm placeholder:font-light placeholder:text-gray-400"
         />

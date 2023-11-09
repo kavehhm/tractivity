@@ -55,6 +55,9 @@ const ActivitySetPage = () => {
                   />
         </h2>
         
+          <p className="text-gray-600 truncate w-full whitespace-break-spaces mt-2 font-normal text-base">{activitySet.isFetchedAfterMount && activitySet.data?.description}</p>
+        
+        
 
 
         <ActivityList

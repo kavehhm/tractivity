@@ -45,13 +45,19 @@ export default function Navbar() {
                     href="/"
                     className="inline-flex items-center border-b-2 border-white px-1 pt-1 text-sm font-medium text-gray-900 hover:border-indigo-500"
                   >
-                    Home
+                    About
                   </Link>
                   {session.isSignedIn && <Link
                     href="/dashboard"
                     className="inline-flex items-center border-b-2 border-white px-1 pt-1 text-sm font-medium text-gray-900 hover:border-indigo-500"
                   >
                     Dashboard
+                  </Link>}
+                  {session.isSignedIn && <Link
+                    href="/dashboard/activities"
+                    className="inline-flex items-center border-b-2 border-white px-1 pt-1 text-sm font-medium text-gray-900 hover:border-indigo-500"
+                  >
+                    Activities
                   </Link>}
                 </div>
               </div>
@@ -123,7 +129,7 @@ export default function Navbar() {
                 href="/"
                 className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-b border-white hover:border-b-indigo-500 hover:bg-gray-50 hover:text-gray-700 "
               >
-                Home
+                About
               </Disclosure.Button>
               {session.isSignedIn && <Disclosure.Button
                 as="a"
@@ -131,6 +137,13 @@ export default function Navbar() {
                 className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-b border-white hover:border-b-indigo-500 hover:bg-gray-50 hover:text-gray-700 "
               >
                 Dashboard
+              </Disclosure.Button>}
+              {session.isSignedIn && <Disclosure.Button
+                as="a"
+                href="/dashboard/activities"
+                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 border-b border-white hover:border-b-indigo-500 hover:bg-gray-50 hover:text-gray-700 "
+              >
+                Activities
               </Disclosure.Button>}
             </div>
           </Disclosure.Panel>

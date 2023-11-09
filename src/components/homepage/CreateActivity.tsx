@@ -52,7 +52,6 @@ const CreateActivity = ({
 
   const allActivityContext = api.useContext().example;
 
-
   useEffect(() => {
     if (activitySet && activitySet.length > 20 && setArr.length == 0) {
       setSetArr([activitySet]);
@@ -113,7 +112,9 @@ const CreateActivity = ({
       </p>
 
       <div className="flex flex-col gap-3">
-        <label className="text-lg font-bold text-gray-900">Name <span className="text-red-500">*</span></label>
+        <label className="text-lg font-bold text-gray-900">
+          Name <span className="text-red-500">*</span>
+        </label>
 
         <input
           onChange={(e) => setName(e.target.value)}
@@ -129,7 +130,9 @@ const CreateActivity = ({
       </div>
 
       <div className="flex flex-col gap-3">
-        <h1 className="text-lg font-bold text-gray-900">Duration <span className="text-red-500">*</span></h1>
+        <h1 className="text-lg font-bold text-gray-900">
+          Duration <span className="text-red-500">*</span>
+        </h1>
         <div className="flex items-center gap-x-2 text-gray-800">
           <input
             onChange={(val) => {
@@ -145,14 +148,21 @@ const CreateActivity = ({
         </div>
         <div className=" z-50 rounded-md border-2">
           <Datepicker
-          classNames={'z-50'}
-popoverDirection="up"
+            classNames={"z-50"}
+            popoverDirection="down"
+            startFrom={
+              new Date(
+                new Date().getFullYear(),
+                new Date().getMonth() - 1,
+                new Date().getDate(),
+              )
+            }
             primaryColor={"purple"}
             value={dates}
             maxDate={new Date()}
             asSingle={stillActive}
             onChange={handleValueChange}
-            showShortcuts={true}
+            showShortcuts={false}
             placeholder="Select date range"
           />
         </div>
