@@ -22,10 +22,10 @@ The application has the goal to be feature rich while remaining easy to use.
 
 - Activity set (tag / folder) creation
 - Activity creation
-- Uploading files for activities.
-- Creating detailed account of activity.
-- Easy linking and linking of activities to sets.
-- User sign up / sign in.
+- Uploading files for activities
+- Creating detailed account of activity
+- Easy linking and linking of activities to sets
+- User sign up / sign in
 
 ## Structuring
 
