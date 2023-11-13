@@ -1,29 +1,59 @@
-# Create T3 App
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+# Tractivity
 
-## What's next? How do I make an app with this?
+This software was created as a way for users to keep track of their extracurriculars / activities.
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+## Technologies used
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+Many different technologies were used to create this software, with the [T3 Stack](https://create.t3.gg/) being the foundation.
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+- [Typescript](https://www.typescriptlang.org/)
+- [Next.js](https://nextjs.org/) 
+- [Clerk](https://clerk.com/)
+- [Prisma](https://www.prisma.io/)
+- [Planetscale (MySQL)](https://planetscale.com/)
+- [tRPC](https://trpc.io/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-## Learn More
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+## Features
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+The application has the goal to be feature rich while remaining easy to use.
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+- Activity set (tag / folder) creation
+- Activity creation
+- Uploading files for activities.
+- Creating detailed account of activity.
+- Easy linking and linking of activities to sets.
+- User sign up / sign in.
 
-## How do I deploy this?
+## Structuring
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
-# tractivity
+The demo version of this software had the task of creating a foundation from complete scratch with a focus on testing. As a result of being completely from scratch, some things from the demo will be built on or changed.
+
+Activity set
+-Amazon job application
+
+Activities
+-Research Paper
+-Amazon internship
+-Toured Amazon headquarters
+-Course on Amazon Web Services
+
+Activity set
+-Activities for College application
+
+Activities
+-Research Paper
+-Amazon internship
+-Captain of the soccer team
+-Volunteered for a non-profit
+As you can see you can have an activity be in multiple sets, and a set can contain multiple activities (many-to-many relationship).
+
+## What comes next?
+
+As Tractivity grows and gains more user feedback, changes will be made to the application. The goal is to get Tractivity used by students worldwide.
+
+
+
+
