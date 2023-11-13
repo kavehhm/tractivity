@@ -32,22 +32,22 @@ The application has the goal to be feature rich while remaining easy to use.
 The demo version of this software had the task of creating a foundation from complete scratch with a focus on testing. As a result of being completely from scratch, some things from the demo will be built on or changed.
 
 Activity set
--Amazon job application
+- Amazon job application
 
 Activities
--Research Paper
--Amazon internship
--Toured Amazon headquarters
--Course on Amazon Web Services
+- Research Paper
+- Amazon internship
+- Toured Amazon headquarters
+- Course on Amazon Web Services
 
 Activity set
--Activities for College application
+- Activities for College application
 
 Activities
--Research Paper
--Amazon internship
--Captain of the soccer team
--Volunteered for a non-profit
+- Research Paper
+- Amazon internship
+- Captain of the soccer team
+- Volunteered for a non-profit
 As you can see you can have an activity be in multiple sets, and a set can contain multiple activities (many-to-many relationship).
 
 ## What comes next?
