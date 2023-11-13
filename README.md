@@ -48,6 +48,8 @@ Activities
 - Amazon internship
 - Captain of the soccer team
 - Volunteered for a non-profit
+
+
 As you can see you can have an activity be in multiple sets, and a set can contain multiple activities (many-to-many relationship).
 
 ## What comes next?
